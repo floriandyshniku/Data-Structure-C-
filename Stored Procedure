@@ -1,0 +1,9 @@
+Stored procedures are precompiled database routines that can be executed on the database server.
+They are written in SQL and stored on the database itself. Here are some advantages of using stored procedures:
+
+Performance optimization: Stored procedures can be optimized for performance by leveraging database-specific optimizations, such as indexing, query plan caching, and parallel execution. 
+This can result in faster query execution times, especially for complex queries.
+Security and data integrity: By granting appropriate permissions, developers can restrict direct access to tables and allow access only through stored procedures. 
+This provides an additional layer of security and helps maintain data integrity.
+Encapsulation and reusability: Stored procedures encapsulate complex business logic within the database, promoting code reusability and centralizing data manipulation operations. 
+They can be called from multiple applications, reducing the need for duplicating code.
