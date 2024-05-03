@@ -1,0 +1,12 @@
+IQueryable<T> inherits from IEnumerable<T>, which means it shares all the querying capabilities of IEnumerable<T> and 
+adds additional features specifically designed for querying data sources that support querying operations directly at the data source (like databases, web services, etc.).
+
+The key difference between IQueryable<T> and IEnumerable<T> is how they execute queries.
+
+IEnumerable<T> executes queries in-memory on collections that have already been loaded into memory. 
+This means that all data is retrieved from the data source and loaded into memory before the query is executed.
+IQueryable<T>, on the other hand, allows queries to be composed and executed remotely on the data source itself (if the data source supports it). 
+This enables more efficient querying, as only the necessary data is retrieved from the data source, potentially reducing network traffic and memory consumption.
+In Entity Framework, for example, LINQ queries against DbSet<T> (which implements IQueryable<T>) are translated into SQL queries and executed on the database server, allowing for efficient database access and manipulation.
+
+In summary, IQueryable<T> provides a way to write and execute queries against data sources in a type-safe manner, with the ability to compose queries and execute them efficiently at the data source level.
