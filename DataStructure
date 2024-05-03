@@ -10,3 +10,6 @@ This enables more efficient querying, as only the necessary data is retrieved fr
 In Entity Framework, for example, LINQ queries against DbSet<T> (which implements IQueryable<T>) are translated into SQL queries and executed on the database server, allowing for efficient database access and manipulation.
 
 In summary, IQueryable<T> provides a way to write and execute queries against data sources in a type-safe manner, with the ability to compose queries and execute them efficiently at the data source level.
+
+IQueryable<T> and its usage with databases, it typically refers to the efficiency gained by executing queries directly on the database server rather than loading data into memory first.
+By executing queries directly on the database server using IQueryable<T>, you can optimize your application's performance by minimizing network traffic and reducing memory usage, especially when dealing with large datasets.
