@@ -13,3 +13,11 @@ In summary, IQueryable<T> provides a way to write and execute queries against da
 
 IQueryable<T> and its usage with databases, it typically refers to the efficiency gained by executing queries directly on the database server rather than loading data into memory first.
 By executing queries directly on the database server using IQueryable<T>, you can optimize your application's performance by minimizing network traffic and reducing memory usage, especially when dealing with large datasets.
+
+An IQueryable is not actually a collection of entities, rather it describes how to obtain that collection. The data is never retrieved from the source until you evaluate it, by turning it into an IEnumerable or something similar.
+
+The advantage of returning an IQueryable from your repository is that your calling code can specify additional .Where clauses BEFORE the query goes to the database. 
+If you returned an IEnumerable, your code would retrieve all values of one table from the database, and then perform filtering in memory, which is inefficient.
+
+-----Network traffic refers to the data that is transmitted over a network between two or more devices. This data can include various types of information, such as files, messages, requests, responses, and more.
+ Network traffic can occur within a local area network (LAN), a wide area network (WAN), or over the internet.  ----
